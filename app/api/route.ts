@@ -12,14 +12,6 @@ const storage = new Storage({
 
 const bucketName = process.env.BUCKET_NAME as string;
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: false,
-    },
-  },
-};
-
 export async function POST(req: NextRequest) {
   if (req.method === "POST") {
     const formData: any = await req.formData();
